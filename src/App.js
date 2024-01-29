@@ -1,11 +1,8 @@
-import './App.css';
+import { createBrowserRouter } from 'react-router-dom';
+import Body from './components/Body';
 
 function App() {
-  return (
-    <div className="text-3xl">
-      helllo
-    </div>
-  );
+    return <Body />;
 }
 
 export default App;
