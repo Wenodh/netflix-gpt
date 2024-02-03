@@ -1,27 +1,25 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Header from './Header';
-import { API_OPTIONS } from '../utils/constants';
-import { useDispatch, useSelector } from 'react-redux';
-import { addNowPlayingMovies } from '../utils/moviesSlice';
-import useNowPlayingMovies from '../hooks/useNowPlayingMovies';
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
+import useGetMovies from '../hooks/useGetMovies';
+import { useSelector } from 'react-redux';
+import GptSearch from './gpt/GptSearch';
 
 const Browse = () => {
-    useNowPlayingMovies();
+    const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+    useGetMovies();
     return (
         <div>
             <Header />
-            <MainContainer />
-            <SecondaryContainer />
-            {
-                //     MainContainer
-                //     - VideoBackGround
-                //     - VideoTitle
-                //     SecondaryContainer
-                // - MoviesList * n
-                // - cards * n
-            }
+            {showGptSearch ? (
+                <GptSearch />
+            ) : (
+                <>
+                    <MainContainer />
+                    <SecondaryContainer />
+                </>
+            )}
         </div>
     );
 };

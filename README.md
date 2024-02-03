@@ -18,6 +18,8 @@
 - unsubscribed to the onAuthStateChanged callback.
 - Registered TMDB API & fetched movies and trailer details
 - Embedded the youtube video & auto play & mute
+- optimized code
+- browse screen updated with multiple type of movie categories
 
 ## Features
 
