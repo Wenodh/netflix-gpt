@@ -70,11 +70,7 @@ const Login = () => {
                 email.current.value,
                 password.current.value
             )
-                .then((userCredential) => {
-                    const user = userCredential.user;
-                    console.log(user);
-                    navigate('/browse');
-                })
+                .then(() => {})
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
