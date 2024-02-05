@@ -20,6 +20,9 @@
 - Embedded the youtube video & auto play & mute
 - optimized code
 - browse screen updated with multiple type of movie categories
+- multi language feature
+- memoization
+- responsiveness
 
 ## Features
 

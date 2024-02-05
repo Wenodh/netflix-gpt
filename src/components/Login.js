@@ -89,39 +89,39 @@ const Login = () => {
                 />
             </div>
             <form
-                className="w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80"
+                className="w-full md:max-w-[400px] absolute p-8 bg-black mt-[100px] mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80"
                 onSubmit={(e) => e.preventDefault()}
             >
-                <h1 className="font-bold text-3xl py-4">{headingText}</h1>
+                <h1 className="font-bold text-xl md:text-3xl">{headingText}</h1>
                 {!isSignInForm && (
                     <input
                         ref={userName}
                         type="text"
                         placeholder="Full Name"
-                        className="p-4 my-4 w-full bg-slate-700"
+                        className="md:p-4 md:my-4 p-2 my-2 w-full bg-slate-700 rounded"
                     />
                 )}
                 <input
                     ref={email}
                     type="text"
                     placeholder="Email Address"
-                    className="p-4 my-4 w-full bg-slate-700"
+                    className="md:p-4 md:my-4 p-2 my-2 w-full rounded bg-slate-700"
                 />
                 <input
                     ref={password}
                     type="password"
                     placeholder="Password"
-                    className="p-4 my-4 w-full bg-slate-700"
+                    className="md:p-4 md:my-4 p-2 my-2 w-full bg-slate-700 rounded"
                 />
                 <p className="text-red-500 font-bold text-lg">{errorMsg}</p>
                 <button
-                    className="p-4 my-4  bg-red-700 w-full rounded-md"
+                    className="md:p-4 md:my-4 p-2 my-2  bg-red-700 w-full rounded-md"
                     onClick={handleButtonCheck}
                 >
                     {btnText}
                 </button>
                 <p
-                    className="cursor-pointer p-4"
+                    className="cursor-pointer"
                     onClick={() => setIsSignInForm(!isSignInForm)}
                 >
                     {footerText}
